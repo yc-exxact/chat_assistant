@@ -37,7 +37,10 @@ except Exception as e:
     retriever = None 
     
 memory = ConversationBufferMemory(memory_key="chat_history")
-llm = OllamaLLM(model="qwen2.5:3b", temperature=0.4)
+llm = OllamaLLM(
+    model="qwen2.5:3b",
+    base_url="https://51f6-2a04-cec0-1063-e8a3-1fdf-750-8134-ee1.ngrok.io"
+)
 
 # Pull RAG Prompt Template from LangChain Hub
 prompt = hub.pull("rlm/rag-prompt")
@@ -203,6 +206,7 @@ except Exception as e:
     retriever = None 
     
 memory = ConversationBufferMemory(memory_key="chat_history")
+
 llm = OllamaLLM(
     model="qwen2.5:3b",
     base_url="https://51f6-2a04-cec0-1063-e8a3-1fdf-750-8134-ee1.ngrok.io"
