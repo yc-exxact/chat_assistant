@@ -15,7 +15,7 @@ from langchain_ollama import OllamaEmbeddings
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
 
-CHROMA_DB_PATH = "./chroma_db"
+CHROMA_DB_PATH = "chroma_db_1"
 app = Flask(__name__)
 app.secret_key = "your-secret-key" 
 # Flask-Session configuration
